@@ -17,9 +17,13 @@ const Users = () => {
             { 
                 users.map(
                     user => (
-                            <div key={user.id} data-testid="user-item">
+                            <Link
+                                key={user.id}
+                                data-testid="user-item"
+                                to={`/users/${user.id}`}
+                            >
                                 { user.name }
-                            </div>
+                            </Link>
                         )
                 )
             }
